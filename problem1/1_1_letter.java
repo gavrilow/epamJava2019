@@ -10,10 +10,11 @@
 Игра продолжается до выигрыша пользователя.
 **/
 
-import java.util.*;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
-  public static void main(String[] GuessingGame) {
+  public static void main(String[] LetterGame) {
     System.out.println("START GAME. Computer chose letter.");
     char guess=0;
     Random r = new Random();
@@ -39,6 +40,6 @@ public class Main {
       if (guess < letter) {
         System.out.println("To LOW, try again");
         }
-    }    
+    }
   }
 }
