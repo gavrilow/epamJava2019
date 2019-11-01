@@ -16,10 +16,10 @@ import java.util.Scanner;
 public class Main {
   public static void main(String[] LetterGame) {
     System.out.println("START GAME. Computer chose letter.");
-    char guess=0;
+    char guess = 0;
     Random r = new Random();
     char letter = (char)(r.nextInt(26) + 'a');
-    System.out.println("Random: " + letter); // show random letter, hide
+    //System.out.println("Random: " + letter); // show random letter, hide
     
     while (guess != letter) {
       System.out.printf("Guess letter: ");
