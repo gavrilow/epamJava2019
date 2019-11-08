@@ -16,22 +16,40 @@ public class Letter {
     public static void main(String[] LetterGame) {
         System.out.println("START GAME. Computer chose letter.");
         char guess = 0;
+        int result = 0;
         Random r = new Random();
         char letter = (char) (r.nextInt(26) + 'a');
         //System.out.println("Random: " + letter); // show random letter, hide
 
         while (guess != letter) {
-            System.out.printf("Guess letter: ");
             Scanner input = new Scanner(System.in);
             guess = Character.toLowerCase(input.next().charAt(0));
             if (!Character.isLetter(guess)) {
-                System.out.println("Enter latin letter only");
+                result = 1;
             } else if (guess == letter) {
-                System.out.println("YOU WIN!");
+                result = 2;
             } else if (guess > letter) {
-                System.out.println("To HIGH, try again");
+                result = 3;
             } else if (guess < letter) {
-                System.out.println("To LOW, try again");
+                result = 4;
+            }
+            // Messages block
+            switch (result) {
+                case 0:
+                    System.out.printf("Guess letter: ");
+                    break;
+                case 1:
+                    System.out.println("Enter latin letter only");
+                    break;
+                case 2:
+                    System.out.println("YOU WIN!");
+                    break;
+                case 3:
+                    System.out.println("To HIGH, try again");
+                    break;
+                case 4:
+                    System.out.println("To LOW, try again");
+
             }
         }
     }
