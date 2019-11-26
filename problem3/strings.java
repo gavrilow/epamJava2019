@@ -11,3 +11,5 @@
 подстрокой, длина которой может не совпадать с длиной слова.
 */
 
+import java.util.Random;
+import java.util.Scanner;
